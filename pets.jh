@@ -1,0 +1,31 @@
+entity Tag {
+	id Long,
+	name String required maxlength(50)
+}
+
+entity Category {
+	id Long,
+	name String required maxlength(100)
+}
+
+enum PetStatus {
+	AVAILABLE, PENDING, SOLD
+}
+
+entity Pet {
+	id Long,
+	name String required maxlength(100),
+	status PetStatus
+}
+
+relationship ManyToMany {
+	Pet{tag(name)} to Tag{pet}
+}
+
+relationship ManyToOne {
+	Pet{category(name)} to Category
+}
+
+paginate Pet with infinite-scroll
+
+service Pet with serviceClass

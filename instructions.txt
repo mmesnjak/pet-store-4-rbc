@@ -1,0 +1,16 @@
+This solution is based on the JHipster Yeoman generator which generates a skeleton for the AngularJS front-end and Spring Boot back-end type of applications.
+I used it since I started using it for my own projects recently.
+
+For development purposes local H2 on disk DB is used which is generated automatically after starting application in the development mode:
+1. unzip project zip file
+2. cd <unzipped_project_folder>
+3. run `npm install`
+4. run `./mvnw`
+
+After successful bootstrap procedure a local instance of embedded Tomcat and H2 DB should be running and the application should be accesible at http://localhost:8080
+
+There are 2 preconfigured users:
+1. user:user
+2. admin:admin
+
+User has only view/read-only permissions for Pet resource and admin user has all permitions.

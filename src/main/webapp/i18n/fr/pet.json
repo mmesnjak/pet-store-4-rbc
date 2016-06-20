@@ -1,0 +1,26 @@
+{
+    "petStoreApp": {
+        "pet" : {
+            "home": {
+                "title": "Pets",
+                "createLabel": "Créer un nouveau Pet",
+                "createOrEditLabel": "Créer ou éditer un Pet",
+                "search": "Recherche pour Pet"
+            },
+            "created": "Un nouveau Pet a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Pet avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Pet avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Pet {{ id }} ?"
+            },
+            "detail": {
+                "title": "Pet"
+            },
+            "name": "Name",
+            "status": "Status",
+            "tag": "Tag",
+            "category": "Category",
+            "photoUrl": "Photo Url"
+        }
+    }
+}

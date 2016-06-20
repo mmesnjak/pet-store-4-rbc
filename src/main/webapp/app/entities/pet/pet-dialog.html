@@ -1,0 +1,80 @@
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPetLabel" translate="petStoreApp.pet.home.createOrEditLabel">Create or edit a
+            Pet</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.pet.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   ng-model="vm.pet.id" readonly/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="petStoreApp.pet.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                   ng-model="vm.pet.name"
+                   required ng-maxlength="100"/>
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.name.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.name.$error.maxlength" translate="entity.validation.maxlength"
+                   translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="petStoreApp.pet.status" for="field_status">Status</label>
+            <select class="form-control" name="status" ng-model="vm.pet.status" id="field_status">
+                <option value="available" translate="petStoreApp.PetStatus.available">available</option>
+                <option value="pending" translate="petStoreApp.PetStatus.pending">pending</option>
+                <option value="sold" translate="petStoreApp.PetStatus.sold">sold</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label translate="petStoreApp.pet.tag" for="field_tag">Tag</label>
+            <select class="form-control" id="field_tag" multiple name="tag" ng-model="vm.pet.tags"
+                    ng-options="tag as tag.name for tag in vm.tags track by tag.id"></select>
+        </div>
+        <div class="form-group">
+            <label translate="petStoreApp.pet.category" for="field_category">Category</label>
+            <select class="form-control" id="field_category" name="category" ng-model="vm.pet.category"
+                    ng-options="category as category.name for category in vm.categories track by category.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="petStoreApp.pet.photoUrl" for="field_photoUrl">Photo Url</label>
+            <input type="text" class="form-control" name="photoUrls" id="field_photoUrl"
+                   ng-model="vm.pet.photoUrls"
+                   ng-maxlength="1024"/>
+            <div ng-show="editForm.photoUrls.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.photoUrls.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+            <!--<div class="form-group">-->
+                <!--<label translate="petStoreApp.pet.photoUrl" for="field_photoUrl">Photo Url</label>-->
+                <!--<select class="form-control" id="field_photoUrl" multiple name="photoUrl" ng-model="vm.pet.photoUrls"-->
+                        <!--ng-options="photoUrl for photoUrl in vm.photoUrls track by photoUrl"></select>-->
+            <!--</div>-->
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+                <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span
+                translate="entity.action.cancel">Cancel</span>
+            </button>
+            <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+                <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+            </button>
+        </div>
+</form>

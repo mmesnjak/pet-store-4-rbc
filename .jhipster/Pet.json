@@ -1,0 +1,42 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "many-to-many",
+      "relationshipName": "tag",
+      "otherEntityName": "tag",
+      "otherEntityField": "name",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "many-to-one",
+      "relationshipName": "category",
+      "otherEntityName": "category",
+      "otherEntityField": "name"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 100
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "status",
+      "fieldType": "PetStatus",
+      "fieldValues": "available, pending, sold"
+    }
+  ],
+  "changelogDate": "20160619230506",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "serviceClass",
+  "entityTableName": "pet"
+}

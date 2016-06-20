@@ -1,0 +1,23 @@
+{
+    "petStoreApp": {
+        "photoUrl" : {
+            "home": {
+                "title": "PhotoUrls",
+                "createLabel": "Créer un nouveau Photo Url",
+                "createOrEditLabel": "Créer ou éditer un Photo Url",
+                "search": "Recherche pour Photo Url"
+            },
+            "created": "Un nouveau Photo Url a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Photo Url avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Photo Url avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Photo Url {{ id }} ?"
+            },
+            "detail": {
+                "title": "Photo Url"
+            },
+            "url": "Url",
+            "pet_id": "Pet Id"
+        }
+    }
+}

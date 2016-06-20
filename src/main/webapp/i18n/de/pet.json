@@ -1,0 +1,26 @@
+{
+    "petStoreApp": {
+        "pet" : {
+            "home": {
+                "title": "Pets",
+                "createLabel": "Pet erstellen",
+                "createOrEditLabel": "Pet erstellen oder bearbeiten",
+                "search": "Suche nach Pet"
+            },
+            "created": "Pet erstellt mit ID {{ param }}",
+            "updated": "Pet aktualisiert mit ID {{ param }}",
+            "deleted": "Pet gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Pet {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Pet"
+            },
+            "name": "Name",
+            "status": "Status",
+            "tag": "Tag",
+            "category": "Category",
+            "photoUrl": "Photo Url"
+        }
+    }
+}

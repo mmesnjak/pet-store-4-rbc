@@ -1,0 +1,29 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "many-to-many",
+      "relationshipName": "pet",
+      "otherEntityName": "pet",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "tag"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 50
+    }
+  ],
+  "changelogDate": "20160619230504",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "tag"
+}

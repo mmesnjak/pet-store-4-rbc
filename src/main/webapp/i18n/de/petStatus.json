@@ -1,0 +1,10 @@
+{
+    "petStoreApp": {
+        "PetStatus" : {
+            "null": "",
+            "available": "erhältlich",
+            "pending": "anstehend",
+            "sold": "verkauft"
+        }
+    }
+}

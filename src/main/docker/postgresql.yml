@@ -1,0 +1,12 @@
+version: '2'
+services:
+    petstore-postgresql:
+        container_name: petstore-postgresql
+        image: postgres:9.5.2
+        # volumes:
+        #     - ~/volumes/jhipster/PetStore/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=PetStore
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

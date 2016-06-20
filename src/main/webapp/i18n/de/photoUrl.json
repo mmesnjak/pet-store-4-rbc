@@ -1,0 +1,23 @@
+{
+    "petStoreApp": {
+        "photoUrl" : {
+            "home": {
+                "title": "Photo Urls",
+                "createLabel": "Photo Url erstellen",
+                "createOrEditLabel": "Photo Url erstellen oder bearbeiten",
+                "search": "Suche nach Photo Url"
+            },
+            "created": "Photo Url erstellt mit ID {{ param }}",
+            "updated": "Photo Url aktualisiert mit ID {{ param }}",
+            "deleted": "Photo Url gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Photo Url {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Photo Url"
+            },
+            "url": "Url",
+            "pet_id": "Pet Id"
+        }
+    }
+}

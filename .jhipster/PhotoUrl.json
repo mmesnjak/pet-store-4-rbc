@@ -1,0 +1,21 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "pet_id",
+            "otherEntityName": "pet",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "url",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160620050121",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "photo_url",
+    "pagination": "infinite-scroll"
+}
