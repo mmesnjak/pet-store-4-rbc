@@ -20,8 +20,8 @@ spring:
     datasource:
         url: jdbc:postgresql://localhost:5432/PetStore
         name:
-        username: PetStore
-        password:
+        username: postgres
+        password: postgres
     jpa:
         database-platform: com.miselmesnjak.petstore.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL

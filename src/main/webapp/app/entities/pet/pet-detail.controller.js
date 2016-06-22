@@ -5,9 +5,9 @@
         .module('petStoreApp')
         .controller('PetDetailController', PetDetailController);
 
-    PetDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'Pet', 'Tag', 'Category', 'PhotoUrl'];
+    PetDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'Pet', 'Tag', 'Category'];
 
-    function PetDetailController($scope, $rootScope, $stateParams, entity, Pet, Tag, Category, PhotoUrl) {
+    function PetDetailController($scope, $rootScope, $stateParams, entity, Pet, Tag, Category) {
         var vm = this;
 
         vm.pet = entity;

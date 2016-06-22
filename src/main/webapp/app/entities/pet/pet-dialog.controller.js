@@ -5,9 +5,9 @@
         .module('petStoreApp')
         .controller('PetDialogController', PetDialogController);
 
-    PetDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Pet', 'Tag', 'Category', 'PhotoUrl', '$log'];
+    PetDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Pet', 'Tag', 'Category', '$log'];
 
-    function PetDialogController($timeout, $scope, $stateParams, $uibModalInstance, entity, Pet, Tag, Category, PhotoUrl, $log) {
+    function PetDialogController($timeout, $scope, $stateParams, $uibModalInstance, entity, Pet, Tag, Category, $log) {
         var vm = this;
 
         vm.pet = entity;
@@ -15,8 +15,8 @@
         vm.save = save;
         vm.tags = Tag.query();
         vm.categories = Category.query();
-        vm.photoUrls = PhotoUrl.query();
-        vm.photoUrls = vm.photoUrls.join(',');
+        // vm.photoUrls = PhotoUrl.query();
+        // vm.photoUrls = vm.photoUrls.join(',');
 
         $timeout(function () {
             angular.element('.form-group:eq(1)>input').focus();
